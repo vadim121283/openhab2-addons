@@ -1,67 +1,68 @@
 # Xiaomi Mi Smart Home Binding
 
-This binding allows your openHAB to communicate with the Xiaomi Smart Home Suite.
-It consists of devices communicating over a ZigBee network with a ZigBee - WiFi gateway. 
+Эта привязка позволяет вашему openHAB взаимодействовать с Xiaomi Smart Home Suite.
+Он состоит из устройств, взаимодействующих по сети ZigBee с шлюзом ZigBee - WiFi.
 
-The devices are very affordable and you can get them from your favourite chinese marktes like [AliExpress](https://www.aliexpress.com/) or [GearBest](https://www.gearbest.com). The sensors run on a coincell battery for over a year. 
+Устройства очень доступны по цене, и вы можете получить их из ваших любимых китайских ресурсов, таких как
+ [AliExpress](https://www.aliexpress.com/) или [GearBest](https://www.gearbest.com). Датчики работают от батареи Coincell более года.
+ 
+ После настройки вы можете отключить шлюз от Интернета, чтобы сохранить конфиденциальность информации о вашем датчике.
 
-After setup, you can disconnect the gateway from the internet to keep your sensor information private.
+## Поддерживаемые устройства
 
-## Supported devices
-
-| Device | Picture |
+| Устройства | Картинка |
 | --- | --- |
-| Gateway v2 (with radio support) or v3  | ![](https://ae01.alicdn.com/kf/HTB1gF76ciqAXuNjy1Xdq6yYcVXa4/Original-Xiaomi-Mi-Gateway-2-Smart-Home-Kit-Multi-functional-Gateway-Work-with-Mi-Door-Sensor.jpg_300x300.jpg) |
+| Gateway v2 (с радио) или v3  | ![](https://ae01.alicdn.com/kf/HTB1gF76ciqAXuNjy1Xdq6yYcVXa4/Original-Xiaomi-Mi-Gateway-2-Smart-Home-Kit-Multi-functional-Gateway-Work-with-Mi-Door-Sensor.jpg_300x300.jpg) |
 | Mijia Temperature and Humidity Sensor | ![](https://ae01.alicdn.com/kf/HTB1ksk_MXXXXXcWXVXXq6xXFXXXz/Original-Xiaomi-Mi-Smart-Temperature-and-Humidity-Sensor-Put-the-baby-Home-office-Work-With-Android.jpg_300x300.jpg)|
 | Aqara Temperature, Humidity and Pressure Sensor | ![](https://ae01.alicdn.com/kf/HTB1fD1URVXXXXaDXFXXq6xXFXXXU/Neue-Original-Xiaomi-Aqara-Intelligente-Luftdruck-Temperatur-Luftfeuchtigkeit-Sensor-Arbeit-Mit-Android-IOS-APP-Fasten-schiff.jpg_300x300.jpg) |
 | Mijia Door/Window Sensor | ![](https://ae01.alicdn.com/kf/HTB1WQb3SpXXXXcLXpXXq6xXFXXXz/100-Original-Intelligent-Mini-Mijia-Xiaomi-MI-Door-Window-Sensor-for-Xiaomi-Smart-Home-Suite-Devices.jpg_300x300.jpg) |
 | Aqara Door/Window Sensor | ![](https://ae01.alicdn.com/kf/HTB1C2f7RVXXXXbNXpXXq6xXFXXX9/Auf-lager-Original-xiaomi-aqara-Smart-T-ren-und-Fenster-Sensor-Mijia-Smart-home-kit-Zigbee.jpg_300x300.jpg) |
 | Mijia Human Body Sensor | ![](https://ae01.alicdn.com/kf/HTB1mvasRXXXXXaZXVXXq6xXFXXXY/XIAOMI-Mi-mijia-Infrared-Motion-Sensor-Smart-Human-Body-Sensor-for-Home-Safety-Smart-Remote-Control.jpg_300x300.jpg) |
-| Aqara Motion Sensor (with light intensity support) | ![](https://ae01.alicdn.com/kf/HTB1LaENRFXXXXXNapXXq6xXFXXXZ/Xiaomi-Aqara-Body-Sensor-Light-Intensity-Sensors-ZigBee-wifi-Wireless-Connection-Work-for-xiaomi-smart-home.jpg_300x300.jpg) |
-| Smart Socket (Zigbee version) | ![](https://ae01.alicdn.com/kf/HTB17Fy2QXXXXXajaXXXq6xXFXXXQ/Original-Xiaomi-Smart-Socket-Plug-Mi-Zigbee-WiFi-APP-Wireless-Control-Switches-EU-US-AU-Timer.jpg_300x300.jpg) |
+| Aqara Motion Sensor (с сенсором освещенности) | ![](https://ae01.alicdn.com/kf/HTB1LaENRFXXXXXNapXXq6xXFXXXZ/Xiaomi-Aqara-Body-Sensor-Light-Intensity-Sensors-ZigBee-wifi-Wireless-Connection-Work-for-xiaomi-smart-home.jpg_300x300.jpg) |
+| Smart Socket (Zigbee версия) | ![](https://ae01.alicdn.com/kf/HTB17Fy2QXXXXXajaXXXq6xXFXXXQ/Original-Xiaomi-Smart-Socket-Plug-Mi-Zigbee-WiFi-APP-Wireless-Control-Switches-EU-US-AU-Timer.jpg_300x300.jpg) |
 | Magic Cube Controller | ![](https://ae01.alicdn.com/kf/HTB1IFoebPuhSKJjSspmq6AQDpXam/Xiaomi-Mi-Magic-Cube-Controller-Zigbee-Version-Controlled-by-Six-Actions-For-Smart-Home-Device-work.jpg_300x300.jpg) |
 | Aqara Magic Cube Controller | ![](https://ae01.alicdn.com/kf/HTB1ih7YsL9TBuNjy1zbq6xpepXal/Original-Xiaomi-Aqara-Cube-Magic-Cube-Smart-Home-Controller-Zigbee-Version-6-Gestures-Operation-Mijia-Smart.jpg_300x300.jpg) |
 | Aqara Vibration Sensor | ![](https://ae01.alicdn.com/kf/HTB1mjNTKXuWBuNjSszbq6AS7FXaS/Xiaomi-Aqara-Zigbee-Shock-Sensor-Mijia-Aqara-Smart-Motion-Sensor-Vibration-Detection-Alarm-Monitor-for-MiHome.jpg_300x300.jpg) |
 | Mijia Wireless Switch | ![](https://ae01.alicdn.com/kf/HTB1qoEAPVXXXXXdaVXXq6xXFXXXr/Original-Xiaomi-Smart-Wireless-Switch-App-Remote-Control-Smart-Home-Intelligent-Device-Accessories-For-Xiaomi-Smart.jpg_300x300.jpg) |
 | Aqara Wireless Switch | ![](https://ae01.alicdn.com/kf/HTB17DMORVXXXXbdXFXXq6xXFXXXe/Xiaomi-Mijia-AQara-Smart-Multifunktionale-Intelligente-Drahtlose-Schalter-Schl-ssel-Kreiselkompa-Errichtet-Funktion-Arbeit-Mit-Android.jpg_300x300.jpg) |
-| Aqara Wireless Switch (with acceleration sensor) | ![](https://ae01.alicdn.com/kf/HTB1YGiNaNsIL1JjSZFqq6AeCpXaX/Original-xiaomi-Mijia-aqara-wireless-key-Upgraded-with-acceleration-sensor-magic-Mi-cube-sensor-work-with.jpg_300x300.jpg) |
-| Aqara Wall Switch (1 & 2 Button / With or Without Neutral Line) | ![](https://ae01.alicdn.com/kf/HTB1VGfGXL9TBuNjy1zbq6xpepXam/Original-Xiaomi-Aqara-Smart-Light-Control-Fire-Wire-Zero-Line-Double-Single-Key-ZiGBee-Wall-Switch.jpg_300x300.jpg) |
-| Aqara Wireless Light Control (1 & 2 Button) | ![](https://ae01.alicdn.com/kf/HTB19u.tPVXXXXbbXVXXq6xXFXXXH/Original-Xiaomi-Aqara-Smart-Switch-Light-Control-ZiGBee-Wireless-Key-Wall-Switch-By-Smarphone-Mi-Home.jpg_300x300.jpg) |
+| Aqara Wireless Switch (с акселератором) | ![](https://ae01.alicdn.com/kf/HTB1YGiNaNsIL1JjSZFqq6AeCpXaX/Original-xiaomi-Mijia-aqara-wireless-key-Upgraded-with-acceleration-sensor-magic-Mi-cube-sensor-work-with.jpg_300x300.jpg) |
+| Aqara Wall Switch (1 или 2 кнопочные / С или БЕЗ нулевой линии) | ![](https://ae01.alicdn.com/kf/HTB1VGfGXL9TBuNjy1zbq6xpepXam/Original-Xiaomi-Aqara-Smart-Light-Control-Fire-Wire-Zero-Line-Double-Single-Key-ZiGBee-Wall-Switch.jpg_300x300.jpg) |
+| Aqara Wireless Light Control (1 или 2 клавиши) | ![](https://ae01.alicdn.com/kf/HTB19u.tPVXXXXbbXVXXq6xXFXXXH/Original-Xiaomi-Aqara-Smart-Switch-Light-Control-ZiGBee-Wireless-Key-Wall-Switch-By-Smarphone-Mi-Home.jpg_300x300.jpg) |
 | Aqara Curtain Motor | ![](https://ae01.alicdn.com/kf/HTB1jaMXQVXXXXXBXVXXq6xXFXXXF/Original-xiaomi-Aqara-Curtain-motor-Zigbee-wifi-Remote-Control-work-for-Xiaomi-Smart-home-kit-Mi.jpg_300x300.jpg) |
 | Aqara Water Leak Sensor | ![](https://ae01.alicdn.com/kf/HTB1zWulSVXXXXaVXXXXq6xXFXXXW/2018-Newest-Xiaomi-Mijia-Aqara-Water-Immersing-Sensor-Flood-Water-Leak-Detector-for-Home-Remote-Alarm.jpg_300x300.jpg) |
 | Honeywell Gas Detector | ![](https://ae01.alicdn.com/kf/HTB1F_ffQpXXXXaxXpXXq6xXFXXXS/Xiaomi-Mijia-Honeywell-Smart-Gas-Alarm-CH4-berwachung-Decke-Wand-Montiert-Einfach-Installieren-Typ-Mihome-APP.jpg_300x300.jpg) |
 | Honeywell Smoke Detector | ![](https://ae01.alicdn.com/kf/HTB12DGKQpXXXXaeaXXXq6xXFXXXK/Xiaomi-Mijia-Honeywell-Smart-Fire-Alarm-Detector-Progressive-Sound-Photoelectric-Smoke-Sensor-Remote-Linkage-Mihome-APP.jpg_300x300.jpg) |
 | Aqara Fingerprint & Keyless Card & PIN Lock | ![](https://ae01.alicdn.com/kf/HTB1lsuqjjuhSKJjSspaq6xFgFXaD/Original-xiaomi-Mijia-aqara-Smart-door-lock-Digital-Touch-Screen-Keyless-Fingerprint-Password-work-to-mi.jpg_300x300.jpg) |
 
-## Setup
+## Настройка
 
-*   Install the binding
-*   Is your gateway already configured to connect to your WiFi? If not:
+*   Установить привязку
+*   Ваш шлюз уже настроен для подключения к WiFi? Если нет:
 
-    	1.  Install MiHome app from [Google Play](https://play.google.com/store/apps/details?id=com.xiaomi.smarthome) or [AppStore](https://itunes.apple.com/app/mi-home-xiaomi-for-your-smarthome/id957323480) (your phone may need to be changed to English language first)
-    	2.  In the app create a Mi Home account and make sure to set your region to Mainland (China) under Settings -> Locale
-    	3.  If asked, update your gateway to the latest firmware (note that update window may pop up sequentially)
+    	1.  Установить MiHome app из [Google Play](https://play.google.com/store/apps/details?id=com.xiaomi.smarthome) или [AppStore](https://itunes.apple.com/app/mi-home-xiaomi-for-your-smarthome/id957323480) (возможно вам необходимо настроить телефон на английский язык)
+    	2.  В приложении создайте Mi Home аккаунт и убедитесь, что ваш регион Mainland (China) (Материковый Китай) в Settings -> Locale
+    	3.  Если потребуется, обновите шлюз до последней версии прошивки (обратите внимание, что окно обновления может появляться последовательно)
 
-*   Enable developer mode of your gateway:
+*   Включить режим разработчика вашего шлюза:
 
-        1.  Select your Gateway in the MiHome app
-        2.  Go to the "..." menu on the top right corner and click "About"
-        3.  Tap the version number "Plug-in version : 2.XX.X" at the bottom of the screen repeatedly until you enable developer mode
-        4.  You should now have 2 extra options listed: `wireless communication protocol` and `hub info`
-        5.  Choose `wireless communication protocol`
-        6.  Tap the toggle switch to enable WiFi functions. Note down the developer key (aka password), something like: 91bg8zfkf9vd6uw7
-        7.  Make sure you hit the OK button (to the right of the cancel button) to save your changes
+        1.  Выберите свой шлюз в MiHome app
+        2.  Нажмите "..." меню в правом верхнем углу и нажмите "About"
+        3.  Нажмите номер версии "Plug-in version : 2.XX.X" в нижней части экрана несколько раз, пока вы не включите режим разработчика
+        4.  Теперь у вас должно быть 2 дополнительных параметра: `wireless communication protocol` и `hub info`
+        5.  Нажмите `wireless communication protocol`
+        6.  Нажмите на переключатель, чтобы включить функции WiFi. Запишите ключ разработчика (он же пароль), что-то вроде: 91bg8zfkf9vd6uw7
+        7.  Убедитесь, что вы нажали кнопку OK (справа от кнопки отмены), чтобы сохранить изменения
 
-*   In openHAB you should now be able to discover the Xiaomi Gateway
-*   From now on you don't really need the app anymore. Only if you want to update the gateway firmware or if you want to add devices (see below). But adding devices can also be done without the app (see below)
-*   Enter the previously noted developer key in openHAB Paper UI -> Configuration -> Things -> Xiaomi Gateway -> Edit -> Developer Key. Save (This is required if you want to be able to send controls to the devices like the light of the gateway)
+*   В openHAB вы теперь сможете обнаружить шлюз Xiaomi
+*   Отныне вам больше не нужно приложение. Только если вы хотите обновить прошивку шлюза или добавить устройства (см. ниже). Но добавление устройств также может быть сделано без приложения (см. ниже)
+*   Введите ранее отмеченный ключ разработчика в openHAB Paper UI -> Configuration -> Things -> Xiaomi Gateway -> Edit -> Developer Key. Save (Это необходимо, если вы хотите иметь возможность управлять например светом шлюза)
 
-## Connecting devices to the gateway
+## Подключение устройств к шлюзу
 
-There are three ways of connecting supported devices to the gateway:
+Существует три способа подключения поддерживаемых устройств к шлюзу:
 
-*   Online - within the MiHome App
-*   Offline - manual
+*   Онлайн - в приложении MiHome
+*   Оффлайн - вручную
 
     1.  Click 3 times on the Gateway's button
     2.  Gateway will flash in blue and you will hear female voice in Chinese, you have 30 seconds to include your new device
